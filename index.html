@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="dark">
+<html lang="vi" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +70,11 @@ nav a[aria-current=page]{background:var(--yel);color:var(--navy)}
 .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 .hstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5em,1fr));gap:12px;margin-top:26px}
 .hstats div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:12px 14px}
-.hstats b{display:block;font-size:clamp(20px,2.1vw,28px);line-height:1.1;white-space:nowrap}
+.hstats div{min-width:0}
+.hstats b{display:block;font-size:clamp(20px,2.1vw,28px);line-height:1.15;white-space:nowrap}
+@media(max-width:420px){.hstats{gap:8px}.hstats div{padding:11px 10px}.hstats b{font-size:18px}.hstats b.w{font-size:17px}}
+.star{flex-shrink:0}
+.hstats b.w{white-space:normal;text-wrap:balance;font-size:clamp(18px,1.7vw,23px)}
 .hstats span{font-size:13px;color:rgba(255,255,255,.8);line-height:1.35;display:block}
 .art{position:relative;aspect-ratio:13/11;width:100%}
 .art svg{position:absolute;inset:0;width:100%;height:100%}
@@ -93,6 +97,7 @@ nav a[aria-current=page]{background:var(--yel);color:var(--navy)}
 :root[data-theme=dark] .trust b{text-shadow:0 0 24px rgba(91,140,255,.7)}
 @media(max-width:820px){.trust{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .trust span{display:block;margin-top:8px;font-size:14.5px;color:var(--mute);max-width:20em}
+@media(max-width:480px){.trust b{font-size:clamp(28px,8.4vw,38px)}}
 .two{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,4vw,56px)}
 @media(max-width:820px){.two{grid-template-columns:minmax(0,1fr)}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
@@ -399,7 +404,7 @@ vi:{
  },
  pages:{
   strategy:{t:"Strategic Planning",s:"Strategy",i:"Từ nghiên cứu thị trường đến kế hoạch năm, quý, tháng: tôi biến mục tiêu kinh doanh thành lộ trình marketing có ngân sách, KPI và người phụ trách.",
-   st:[["Năm · Quý · Tháng","chu kỳ kế hoạch Marketing & BD tại Vietint"],["4D","mô hình Study Abroad do tôi đề xuất"],["6","thành viên đội Marketing được điều phối"]],
+   st:[["Năm · Quý · Tháng","chu kỳ kế hoạch Marketing & BD tại Vietint"],["4D","mô hình Study Abroad do tôi đề xuất"],["6","thành viên đội Marketing được điều phối"]],
    caps:[["Nghiên cứu thị trường & insight","Phân tích đối thủ, hành vi khách hàng và xu hướng ngành để tìm điểm khác biệt."],["Định vị & Brand Guidelines","Xây định vị thương hiệu và bộ nhận diện để mọi kênh nói cùng một giọng."],["Kế hoạch & ngân sách","Lập kế hoạch marketing theo năm, quý, tháng; phân bổ và quản trị ngân sách theo ROI."],["Chiến lược IMC","Kết nối digital, event, đối tác và nội dung thành một chiến dịch thống nhất."]],
    cases:[{g:"Hifunnel · SaaS",t:"Chiến lược thương hiệu cho nền tảng SaaS tri thức",d:"Xây kế hoạch marketing, định vị thương hiệu và Brand Guidelines; tham gia định hướng sản phẩm, kênh tiếp cận khách hàng; quản trị ngân sách và đội ngũ.",r:"Nền tảng cho 422 lượt dùng thử mới"},{g:"Vietint · Du học",t:"Kế hoạch Marketing & BD theo năm, quý, tháng",d:"Lập ngân sách, nghiên cứu thị trường, phân tích insight; đề xuất mô hình 4D Study Abroad cùng tư duy marketing dựa trên ROI để tạo khác biệt cho thương hiệu.",r:"128 hồ sơ du học thành công năm 2025"},{g:"Đức Anh EduConnect · Giáo dục",t:"Chiến lược IMC cho 2 thương hiệu giáo dục",d:"Phân tích đối thủ và hành vi khách hàng; đề xuất chiến lược tích hợp cho Đức Anh EduConnect và Access English Academy; tái cấu trúc nội dung website và UX.",r:"Hành trình chuyển đổi lead rõ ràng hơn"},{g:"SEONGON · Agency",t:"Đề xuất IMC & Digital Branding",d:"Hỗ trợ lập kế hoạch chiến lược và trình bày với khách hàng lớn; chiến dịch ra mắt Kenju Cake (Richy Group) và cuộc thi vẽ tranh của Korea Tourism Organization.",r:"Chiến dịch đạt KPI thương hiệu"}],
    steps:[["Audit","Rà thị trường, đối thủ, kênh và phễu hiện tại"],["Insight","Tìm động lực và rào cản của khách hàng"],["Định vị","Chọn điểm khác biệt và thông điệp chủ đạo"],["Kế hoạch","KPI, ngân sách, kênh, lịch triển khai"],["Đo lường","Theo dõi số liệu, tối ưu theo ROI"]],
@@ -476,7 +481,7 @@ en:{
  },
  pages:{
   strategy:{t:"Strategic Planning",s:"Strategy",i:"From market research to annual, quarterly and monthly plans: I turn business goals into marketing roadmaps with budgets, KPIs and owners.",
-   st:[["Year · Quarter · Month","marketing & BD planning cycle at Vietint"],["4D","study-abroad model I proposed"],["6","marketers coordinated"]],
+   st:[["Year · Quarter · Month","marketing & BD planning cycle at Vietint"],["4D","study-abroad model I proposed"],["6","marketers coordinated"]],
    caps:[["Market research & insight","Competitor, customer behavior and industry analysis to find the edge."],["Positioning & brand guidelines","A clear position and identity so every channel speaks with one voice."],["Planning & budgeting","Annual, quarterly and monthly plans with budgets managed by ROI."],["IMC strategy","Digital, events, partners and content joined into one campaign."]],
    cases:[{g:"Hifunnel · SaaS",t:"Brand strategy for a knowledge-business SaaS",d:"Built the marketing plan, brand positioning and brand guidelines; shaped product direction and acquisition channels; managed budget and team.",r:"Foundation for 422 new trials"},{g:"Vietint · Study abroad",t:"Annual, quarterly and monthly marketing & BD plans",d:"Budgeting, market research and insight analysis; proposed the 4D Study Abroad model and ROI-driven marketing to differentiate the brand.",r:"128 successful applications in 2025"},{g:"Đức Anh EduConnect · Education",t:"IMC strategy for two education brands",d:"Competitor and customer behavior analysis; integrated strategy for Đức Anh EduConnect and Access English Academy; website content structure and UX.",r:"A clearer lead conversion journey"},{g:"SEONGON · Agency",t:"IMC & digital branding proposals",d:"Supported strategic planning and client pitches for major accounts; Kenju Cake launch (Richy Group) and the Korea Tourism Organization drawing contest.",r:"Campaigns hit brand KPIs"}],
    steps:[["Audit","Market, competitors, channels and current funnel"],["Insight","Customer drivers and barriers"],["Position","Choose the edge and core message"],["Plan","KPIs, budget, channels, timeline"],["Measure","Track the numbers, optimize by ROI"]],
@@ -600,7 +605,7 @@ ko:{
 const PAGES=["about","strategy","events","inbound","partnership","skills","contact"];
 const root=document.documentElement,main=document.getElementById("main");
 let lang="vi";
-try{const s=localStorage.getItem("vc-lang");if(C[s])lang=s;const t=localStorage.getItem("vc-theme");if(t)root.dataset.theme=t}catch(e){}
+try{const s=localStorage.getItem("vc-lang");if(C[s])lang=s;const t=localStorage.getItem("vc-theme2");if(t)root.dataset.theme=t}catch(e){}
 
 /* ---------- art ---------- */
 const DEFS=`<defs><linearGradient id="gc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a7dff"/><stop offset="1" stop-color="#0b25c4"/></linearGradient><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".26"/><stop offset="1" stop-color="#fff" stop-opacity=".05"/></linearGradient><radialGradient id="gl"><stop offset="0" stop-color="#5fb4ff" stop-opacity=".6"/><stop offset="1" stop-color="#5fb4ff" stop-opacity="0"/></radialGradient><linearGradient id="gy" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5cf0b4"/><stop offset="1" stop-color="#14c47e"/></linearGradient></defs><circle cx="270" cy="230" r="230" fill="url(#gl)"/>`;
@@ -648,10 +653,10 @@ function about(d){const a=d.about;return hero(d,"about","Phùng Hoàng Việt","
 <section class="band"><div class="wrap"><h2>${a.skT}</h2><div class="sk">${a.sk.map(s=>`<div><h3>${s[0]}</h3><div class="tags">${s[1].map(x=>`<span>${x}</span>`).join("")}</div></div>`).join("")}<div><h3>${a.toT}</h3>${a.to.map(t=>`<p style="font-size:14.5px;margin:0 0 8px"><b>${t[0]}:</b> <span class="mute">${t[1]}</span></p>`).join("")}</div></div></div></section>
 <section class="band alt"><div class="wrap"><h2>${a.gT}</h2><div class="goals">${a.goals.map((g,i)=>`<div class="goal${i?" b":""}"><h3>${g[0]}</h3><ul>${g[1].map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("")}</div></div></section>`+cta(d)}
 
-function sub(k,d){const p=d.pages[k];return hero(d,k,p.t,p.s,`<p class="lead">${p.i}</p><div class="hstats">${p.st.map(s=>`<div><b>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div><div class="acts"><a class="btn y" href="#contact">${d.ui.cta} →</a></div>`)+
+function sub(k,d){const p=d.pages[k];return hero(d,k,p.t,p.s,`<p class="lead">${p.i}</p><div class="hstats">${p.st.map(s=>`<div><b${/\s/.test(s[0])?' class="w"':""}>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div><div class="acts"><a class="btn y" href="#contact">${d.ui.cta} →</a></div>`)+
 `<section class="band"><div class="wrap"><h2>${d.ui.caps}</h2><div class="caps">${p.caps.map(c=>`<div class="card"><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join("")}</div></div></section>
 ${k==="skills"?ebook(d)+podcast(d)+videos(d)+slides(d)+works(d):""}${k==="strategy"?plans(d):""}${k==="inbound"?chans(d):""}${k==="partnership"?net(d)+schools(d):""}<section class="band alt"><div class="wrap"><h2>${d.ui.cases}</h2><div class="cases">${p.cases.map(c=>`<article class="card case"><span class="pill">${c.g}</span><h3>${c.t}</h3><p>${c.d}</p><div class="out"><span class="star">✳</span><span>${c.r}</span></div></article>`).join("")}</div></div></section>
-<section class="band"><div class="wrap"><h2>${k==="skills"?d.stepsSkills:d.ui.steps}</h2><div class="steps">${p.steps.map(s=>`<div><b>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div></div></section>
+<section class="band"><div class="wrap"><h2>${k==="skills"?d.stepsSkills:d.ui.steps}</h2><div class="steps">${p.steps.map(s=>`<div><b${/\s/.test(s[0])?' class="w"':""}>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div></div></section>
 <section class="band alt"><div class="wrap"><div class="ghead"><div><h2>${d.ui.gal}</h2>${p.gal.some(g=>!g[2])?`<p class="small" style="margin:6px 0 0">${d.ui.gnote}</p>`:""}</div><div class="gnav"><button type="button" class="icon" data-g="-1" aria-label="${d.ui.prev}">←</button><button type="button" class="icon" data-g="1" aria-label="${d.ui.next}">→</button></div></div><div class="gal" id="gal" tabindex="0">${p.gal.map((g,i)=>g[2]?`<div class="gi pic${g[3]===2?" sq":g[3]?"":" wide"}"><img src="${g[2]}" alt="${g[0]}" loading="lazy"><span>${g[1]}</span><b>${g[0]}</b></div>`:`<div class="gi">${galArt(i)}<span>${g[1]}</span><b>${g[0]}</b></div>`).join("")}</div></div></section>`+cta(d)}
 
 function works(d){const w=d.wk;return `<section class="band alt"><div class="wrap"><h2 style="margin-bottom:8px">${w.h}</h2><p class="mute" style="max-width:48em;margin-bottom:18px">${w.sub}</p><div class="wtabs" role="tablist">${w.tabs.map((t,i)=>`<button type="button" role="tab" data-wf="${i-1}" aria-selected="${i===0}">${t}</button>`).join("")}</div><div class="wgrid">${w.it.map((x,i)=>`<button type="button" class="wi" data-wi="${i}" data-c="${x[1]}" aria-label="${x[2]}"><img src="${WK[x[0]]}" alt="" loading="lazy" draggable="false"><span>${x[2]}</span></button>`).join("")}</div></div></section>`}
@@ -761,7 +766,7 @@ const moon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="
 const isDark=()=>root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
 const tb=document.getElementById("themeBtn");
 const icon=()=>{tb.innerHTML=isDark()?sun:moon};
-tb.onclick=()=>{const n=isDark()?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("vc-theme",n)}catch(e){}icon()};
+tb.onclick=()=>{const n=isDark()?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("vc-theme2",n)}catch(e){}icon()};
 document.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{lang=b.dataset.l;try{localStorage.setItem("vc-lang",lang)}catch(e){}render(false)});
 window.addEventListener("hashchange",()=>{fbClose();lbClose();render(true)});
 icon();render(false);
